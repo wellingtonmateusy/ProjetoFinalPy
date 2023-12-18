@@ -1,6 +1,8 @@
-# ProjetoFinalPy
+# Crie sua própria equipe do CBLOL
 
-### 👨‍💻 Tecnologias que poderam ser utilizadas:
+![Riot Games logo](https://img.shields.io/badge/Riot_Games-D32936?style=for-the-badge&logo=riot-games&logoColor=white)
+
+### 👨‍💻 Tecnologias que serão utilizadas nesse projeto:
 
 ![HTML logo](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3 logo](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
