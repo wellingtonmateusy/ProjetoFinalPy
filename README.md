@@ -1,10 +1,6 @@
 # Crie sua própria equipe do CBLOL
 
 ![Riot Games logo](https://img.shields.io/badge/Riot_Games-D32936?style=for-the-badge&logo=riot-games&logoColor=white)
-![Cartola FC logo](file:///C:/Users/mateu/Downloads/1.png)
-![1](https://github.com/wellingtonmateusy/ProjetoFinalPy/assets/128413824/1eba11f8-d88e-42cc-b951-409c970b2925)
-![2](https://github.com/wellingtonmateusy/ProjetoFinalPy/assets/128413824/1c0682af-202a-47d1-bffa-034300591a14)
-
 
 ### 👨‍💻 Tecnologias que serão utilizadas nesse projeto:
 
