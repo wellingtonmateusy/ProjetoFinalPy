@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header a{
+    text-decoration: none;
+}
+
+header a .login{
+    background-color: #D3AD6C;
+    color: #212529; 
+    text-transform: uppercase;
+}
+
+header a .login:hover{
+    background-color: #D3AD6C;
+    color: #212529; 
+}
+
+header a .cadastro{
+    color: #D3AD6C;
+}
+
+header a .cadastro:hover{
+    color: #D3AD6C;
+}
+
+.offcanvas-header img{
+    width: 100%;
+}
+
+.offcanvas-body a button .ico_nome{
+    display: inline-flex;
+}
+
+.offcanvas-body a button h6{
+    margin-left: 10px;
+    margin-top: 2px;
+}
