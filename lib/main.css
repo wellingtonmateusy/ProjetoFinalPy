@@ -32,7 +32,8 @@ header a .cadastro:hover{
 }
 
 .offcanvas-body a button .ico_nome{
-    display: inline-flex;
+    text-align: left;
+    display: flex;
 }
 
 .offcanvas-body a button h6{
