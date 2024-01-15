@@ -21,12 +21,9 @@ header a .login:hover{
     color: #212529; 
 }
 
-header a .cadastro{
+.cadastro{
     color: #D3AD6C;
-}
-
-header a .cadastro:hover{
-    color: #D3AD6C;
+    text-decoration: none;
 }
 
 #buttonsheader{
@@ -38,7 +35,7 @@ header a .cadastro:hover{
 }
 
 .navbar-nav{
-    height: 500px;
+    height: 1080px;
 }
 
 .nav-link .ico_nome h6{
@@ -76,31 +73,35 @@ header a .cadastro:hover{
 }
 
 .bodyLogin{
-    background-image: url(./midias/SummonersRiftMap.webp);
+    background-image: url(/jbareham_191158_ply0958_decade_lolengends.0.jpg);
+    overflow-x: hidden;
 }
 
 .formLogin{
-    margin-top: 10%;
+    margin-top: 15%;
 }
 
 form .fw-bold{
-    color: white;
+    color: rgb(99, 99, 99);
 }
 
 form #email, #senha{
     background-color: #212529;
-    color: white;
+    color: #fff;
+    border-color: #D3AD6C;
 }
 
-form .login{
+form .btn-dark{
     background-color: #D3AD6C;
     color: #212529; 
     text-transform: uppercase;
-    margin-left: 100px;
+    text-align: center;
 }
 
-form .login:hover{
+form .btn-dark:active{
     background-color: #D3AD6C;
-    color: #212529; 
+    color: #212529;
 }
+
+
 
