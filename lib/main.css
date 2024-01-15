@@ -75,8 +75,32 @@ header a .cadastro:hover{
     color: green;
 }
 
-body .mapa img{
-    width: 50%;
-    margin-left: 555px;
+.bodyLogin{
+    background-image: url(./midias/SummonersRiftMap.webp);
+}
+
+.formLogin{
+    margin-top: 10%;
+}
+
+form .fw-bold{
+    color: white;
+}
+
+form #email, #senha{
+    background-color: #212529;
+    color: white;
+}
+
+form .login{
+    background-color: #D3AD6C;
+    color: #212529; 
+    text-transform: uppercase;
+    margin-left: 100px;
+}
+
+form .login:hover{
+    background-color: #D3AD6C;
+    color: #212529; 
 }
 
