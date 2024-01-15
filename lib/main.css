@@ -4,14 +4,16 @@
     padding: 0;
 }
 
-header a{
-    text-decoration: none;
+.container{
+    width: 300px;
+    max-width: 1080px;
 }
 
 header a .login{
     background-color: #D3AD6C;
     color: #212529; 
     text-transform: uppercase;
+    margin-left: 250px;
 }
 
 header a .login:hover{
@@ -27,16 +29,54 @@ header a .cadastro:hover{
     color: #D3AD6C;
 }
 
-.offcanvas-header img{
-    width: 100%;
-}
-
-.offcanvas-body a button .ico_nome{
-    text-align: left;
+#buttonsheader{
     display: flex;
 }
 
-.offcanvas-body a button h6{
-    margin-left: 10px;
-    margin-top: 2px;
+.navbar-brand img{
+    width: 200px;
 }
+
+.navbar-nav{
+    height: 500px;
+}
+
+.nav-link .ico_nome h6{
+    margin-left: 10px;
+}
+
+.card-body{
+    justify-content: center;
+}
+
+.card-body h6{
+    margin-left: 5px;
+    text-align: center;
+}
+
+#ar_jogadores{
+    margin-left: 20%;
+    margin-top: 50px;
+}
+
+#imgJogador{
+    border-radius: 100%;
+}
+
+#espaco{
+    margin-left: 5px;
+}
+
+#icones, h6{
+    color: #fff;
+}
+
+.bi-plus-lg{
+    color: green;
+}
+
+body .mapa img{
+    width: 50%;
+    margin-left: 555px;
+}
+
