@@ -4,9 +4,8 @@
     padding: 0;
 }
 
-.container{
-    width: 300px;
-    max-width: 1080px;
+html{
+    overflow-x: hidden;
 }
 
 #buttonsheader{
@@ -21,7 +20,7 @@ section #buttonsheader .login{
     background-color: #D3AD6C;
     color: #212529; 
     text-transform: uppercase;
-    margin-left: 250px;
+    margin-left: 100px;
 }
 
 section #buttonsheader .cadastro{
@@ -31,15 +30,28 @@ section #buttonsheader .cadastro{
 }
 
 .navbar-brand img{
-    width: 200px;
+    width: 100%;
 }
 
 .navbar-nav{
     height: 1080px;
 }
 
-.nav-link{
-    width: 100%;
+.nav-item .nav-link{
+    width: 280px;
+}
+
+.navbar-nav .nav-item .active{
+    background-color: #161616;
+}
+
+.nav-item:hover{
+    background-color: #2c2c2c;
+    border-radius: 6px;
+}
+
+.nav-item .espacoNav{
+    margin-left: 20%;
 }
 
 .nav-link .bi{
@@ -61,7 +73,7 @@ section #buttonsheader .cadastro{
 }
 
 #ar_jogadores{
-    margin-left: 20%;
+    margin-left: 15%;
     margin-top: 50px;
 }
 
