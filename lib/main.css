@@ -37,7 +37,7 @@ section #buttonsheader .cadastro{
 }
 
 .nav-item .nav-link{
-    width: 200px;
+    width: 280px;
 }
 
 .navbar-nav .nav-item .active{
@@ -92,8 +92,12 @@ section #buttonsheader .cadastro{
     color: green;
 }
 
-.modal-header .btn-close{
+.modal-header{
     color: #fff;
+}
+
+#jogador{
+    width: 50%;
 }
 
 .bodyLogin, .bodyCadastro{
