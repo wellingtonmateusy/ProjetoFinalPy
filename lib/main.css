@@ -20,7 +20,6 @@ section #buttonsheader .login{
     background-color: #D3AD6C;
     color: #212529; 
     text-transform: uppercase;
-    margin-left: 100px;
 }
 
 section #buttonsheader .cadastro{
@@ -38,7 +37,7 @@ section #buttonsheader .cadastro{
 }
 
 .nav-item .nav-link{
-    width: 280px;
+    width: 200px;
 }
 
 .navbar-nav .nav-item .active{
@@ -91,6 +90,10 @@ section #buttonsheader .cadastro{
 
 .bi-plus-lg{
     color: green;
+}
+
+.modal-header .btn-close{
+    color: #fff;
 }
 
 .bodyLogin, .bodyCadastro{
