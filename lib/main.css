@@ -71,6 +71,11 @@ section #buttonsheader .cadastro{
     text-align: center;
 }
 
+.camp{
+    width: 25%;
+    margin-right: 10px;
+}
+
 #ar_jogadores{
     margin-left: 15%;
     margin-top: 50px;
@@ -84,7 +89,7 @@ section #buttonsheader .cadastro{
     margin-left: 5px;
 }
 
-#icones, h6{
+#icones, h3, h5, h6, p{
     color: #fff;
 }
 
@@ -96,8 +101,21 @@ section #buttonsheader .cadastro{
     color: #fff;
 }
 
+a{
+    text-decoration: none;
+}
+
 #jogador{
     width: 50%;
+}
+
+#tabelaTop, #tabelaJg,
+#tabelaMid, #tabelaAdc,
+#tabelaSup, #tabelaCoach{
+    max-height: 340px;
+    overflow-y: scroll;
+    border-collapse: collapse;
+    width: 100%;
 }
 
 .bodyLogin, .bodyCadastro{
