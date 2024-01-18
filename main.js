@@ -108,8 +108,8 @@ $(document).ready(function(){
             tabelaHTML += '<td id="jogador"><img src="' + jogadoresTop[i].foto + '" alt="' + jogadoresTop[i].nome + '" class="w-75"></td>';
             tabelaHTML += '<td class="text-center">' + jogadoresTop[i].nome + '</td>';
             tabelaHTML += '<td><img src="' + jogadoresTop[i].pais + '" alt="" class="rounded w-100"></td>';
-            tabelaHTML += '<td><img src="' + jogadoresTop[i].time + '" alt="" class="w-75"></td>';
-            tabelaHTML += '<td>' + jogadoresTop[i].preco + '</td>';
+            tabelaHTML += '<td class="text-center"><img src="' + jogadoresTop[i].time + '" alt="" class="w-75"></td>';
+            tabelaHTML += '<td class="text-center">' + jogadoresTop[i].preco + '</td>';
             tabelaHTML += '<td> <button type="submit" class="btn btn-success col-12 bg-dark"><i class="bi bi-plus-lg"></button></td>';
             tabelaHTML += '</tr>\n';
         }
@@ -143,8 +143,8 @@ $(document).ready(function(){
             tabelaHTML += '<td id="jogador"><img src="' + jogadoresJg[i].foto + '" alt="' + jogadoresJg[i].nome + '" class="w-75"></td>';
             tabelaHTML += '<td class="text-center">' + jogadoresJg[i].nome + '</td>';
             tabelaHTML += '<td><img src="' + jogadoresJg[i].pais + '" alt="" class="rounded w-100"></td>';
-            tabelaHTML += '<td><img src="' + jogadoresJg[i].time + '" alt="" class="w-75"></td>';
-            tabelaHTML += '<td>' + jogadoresJg[i].preco + '</td>';
+            tabelaHTML += '<td class="text-center"><img src="' + jogadoresJg[i].time + '" alt="" class="w-75"></td>';
+            tabelaHTML += '<td class="text-center">' + jogadoresJg[i].preco + '</td>';
             tabelaHTML += '<td> <button type="submit" class="btn btn-success col-12 bg-dark"><i class="bi bi-plus-lg"></button></td>';
             tabelaHTML += '</tr>\n';
         }
@@ -178,8 +178,8 @@ $(document).ready(function(){
             tabelaHTML += '<td id="jogador"><img src="' + jogadoresMid[i].foto + '" alt="' + jogadoresMid[i].nome + '" class="w-75"></td>';
             tabelaHTML += '<td class="text-center">' + jogadoresMid[i].nome + '</td>';
             tabelaHTML += '<td><img src="' + jogadoresMid[i].pais + '" alt="" class="rounded w-100"></td>';
-            tabelaHTML += '<td><img src="' + jogadoresMid[i].time + '" alt="" class="w-75"></td>';
-            tabelaHTML += '<td>' + jogadoresMid[i].preco + '</td>';
+            tabelaHTML += '<td class="text-center"><img src="' + jogadoresMid[i].time + '" alt="" class="w-75"></td>';
+            tabelaHTML += '<td class="text-center">' + jogadoresMid[i].preco + '</td>';
             tabelaHTML += '<td> <button type="submit" class="btn btn-success col-12 bg-dark"><i class="bi bi-plus-lg"></button></td>';
             tabelaHTML += '</tr>\n';
         }
@@ -213,8 +213,8 @@ $(document).ready(function(){
             tabelaHTML += '<td id="jogador"><img src="' + jogadoresAdc[i].foto + '" alt="' + jogadoresAdc[i].nome + '" class="w-75"></td>';
             tabelaHTML += '<td class="text-center">' + jogadoresAdc[i].nome + '</td>';
             tabelaHTML += '<td><img src="' + jogadoresAdc[i].pais + '" alt="" class="rounded w-100"></td>';
-            tabelaHTML += '<td><img src="' + jogadoresAdc[i].time + '" alt="" class="w-75"></td>';
-            tabelaHTML += '<td>' + jogadoresAdc[i].preco + '</td>';
+            tabelaHTML += '<td class="text-center"><img src="' + jogadoresAdc[i].time + '" alt="" class="w-75"></td>';
+            tabelaHTML += '<td class="text-center">' + jogadoresAdc[i].preco + '</td>';
             tabelaHTML += '<td> <button type="submit" class="btn btn-success col-12 bg-dark"><i class="bi bi-plus-lg"></button></td>';
             tabelaHTML += '</tr>\n';
         }
@@ -248,8 +248,8 @@ $(document).ready(function(){
             tabelaHTML += '<td id="jogador"><img src="' + jogadoresSup[i].foto + '" alt="' + jogadoresSup[i].nome + '" class="w-75"></td>';
             tabelaHTML += '<td class="text-center">' + jogadoresSup[i].nome + '</td>';
             tabelaHTML += '<td><img src="' + jogadoresSup[i].pais + '" alt="" class="rounded w-100"></td>';
-            tabelaHTML += '<td><img src="' + jogadoresSup[i].time + '" alt="" class="w-75"></td>';
-            tabelaHTML += '<td>' + jogadoresSup[i].preco + '</td>';
+            tabelaHTML += '<td class="text-center"><img src="' + jogadoresSup[i].time + '" alt="" class="w-75"></td>';
+            tabelaHTML += '<td class="text-center">' + jogadoresSup[i].preco + '</td>';
             tabelaHTML += '<td> <button type="submit" class="btn btn-success col-12 bg-dark"><i class="bi bi-plus-lg"></button></td>';
             tabelaHTML += '</tr>\n';
         }
@@ -283,8 +283,8 @@ $(document).ready(function(){
             tabelaHTML += '<td id="jogador"><img src="' + Coachs[i].foto + '" alt="' + Coachs[i].nome + '" class="w-75"></td>';
             tabelaHTML += '<td class="text-center">' + Coachs[i].nome + '</td>';
             tabelaHTML += '<td><img src="' + Coachs[i].pais + '" alt="" class="rounded w-100"></td>';
-            tabelaHTML += '<td><img src="' + Coachs[i].time + '" alt="" class="w-75"></td>';
-            tabelaHTML += '<td>' + Coachs[i].preco + '</td>';
+            tabelaHTML += '<td class="text-center"><img src="' + Coachs[i].time + '" alt="" class="w-75"></td>';
+            tabelaHTML += '<td class="text-center">' + Coachs[i].preco + '</td>';
             tabelaHTML += '<td> <button type="submit" class="btn btn-success col-12 bg-dark"><i class="bi bi-plus-lg"></button></td>';
             tabelaHTML += '</tr>\n';
         }

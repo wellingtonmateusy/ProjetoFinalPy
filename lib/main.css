@@ -71,11 +71,6 @@ section #buttonsheader .cadastro{
     text-align: center;
 }
 
-.camp{
-    width: 25%;
-    margin-right: 10px;
-}
-
 #ar_jogadores{
     margin-left: 15%;
     margin-top: 50px;
@@ -109,13 +104,50 @@ a{
     width: 50%;
 }
 
+div #campeonatos .card{
+    background-color: #212529;
+}
+
+div #campeonatos:hover .card{
+    background-color: #2c2c2c;
+}
+
+#imgMT article:hover img{
+    opacity: 0.5;
+}
+
 #tabelaTop, #tabelaJg,
 #tabelaMid, #tabelaAdc,
 #tabelaSup, #tabelaCoach{
-    max-height: 340px;
+    padding: 2px;
+    max-height: 350px;
     overflow-y: scroll;
     border-collapse: collapse;
     width: 100%;
+}
+
+#tabelaTop::-webkit-scrollbar-track, #tabelaJg::-webkit-scrollbar-track,
+#tabelaMid::-webkit-scrollbar-track, #tabelaAdc::-webkit-scrollbar-track,
+#tabelaSup::-webkit-scrollbar-track, #tabelaCoach::-webkit-scrollbar-track,
+html::-webkit-scrollbar-track{
+    padding: 2px 0;
+    background-color: #404040;
+    border-radius: 10px;
+}
+
+#tabelaTop::-webkit-scrollbar, #tabelaJg::-webkit-scrollbar,
+#tabelaMid::-webkit-scrollbar, #tabelaAdc::-webkit-scrollbar,
+#tabelaSup::-webkit-scrollbar, #tabelaCoach::-webkit-scrollbar,
+html::-webkit-scrollbar{
+    width: 10px;
+}
+
+#tabelaTop::-webkit-scrollbar-thumb, #tabelaJg::-webkit-scrollbar-thumb,
+#tabelaMid::-webkit-scrollbar-thumb, #tabelaAdc::-webkit-scrollbar-thumb,
+#tabelaSup::-webkit-scrollbar-thumb, #tabelaCoach::-webkit-scrollbar-thumb,
+html::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: #D3AD6C;
 }
 
 .bodyLogin, .bodyCadastro{
