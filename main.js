@@ -285,7 +285,7 @@ $(document).ready(function(){
             tabelaHTML += '<td><img src="' + Coachs[i].pais + '" alt="" class="rounded w-100"></td>';
             tabelaHTML += '<td class="text-center"><img src="' + Coachs[i].time + '" alt="" class="w-75"></td>';
             tabelaHTML += '<td class="text-center">' + Coachs[i].preco + '</td>';
-            tabelaHTML += '<td> <button type="submit" class="btn btn-success col-12 bg-dark"><i class="bi bi-plus-lg"></button></td>';
+            tabelaHTML += '<td> <button type="submit" class="btn btn-success col-12 bg-dark" id="submitCoach"><i class="bi bi-plus-lg"></button></td>';
             tabelaHTML += '</tr>\n';
         }
 
@@ -302,4 +302,30 @@ $(document).ready(function(){
     document.getElementById('tabelaAdc').innerHTML = construirTabelaAdc(jogadoresAdc);
     document.getElementById('tabelaSup').innerHTML = construirTabelaSup(jogadoresSup);
     document.getElementById('tabelaCoach').innerHTML = construirTabelaCoach(Coachs);
+
+    function construirArtigoCoach(Coachs) {
+        var artigoHTML = '<article class="card col-2 bg-dark">'
+            artigoHTML += '<article class="card-body">'
+            artigoHTML += '<img src="./lib/midias/LogosOrgs/Fluxo.webp" alt="" class="col-2 mt-2">'
+            artigoHTML += '<img src="./lib/midias/Jogadores/Fluxo/6COACH.png" alt="" class="col-12" id="imgJogador">'
+            artigoHTML += '<div class="d-flex justify-content-center mb-2">'
+            artigoHTML += '<img src="./lib/midias/Funções/Coach.png" alt="" class="col-5 mt-2" id="funcao">'
+            artigoHTML += '<h6 class="Fnome">ONMETA</h6>'
+            artigoHTML += '</div>'
+            artigoHTML += '<button type="reset" class="btn btn-danger col-12 bg-dark"><i class="bi bi-dash-lg"></i></button>'
+            artigoHTML += '</article>'
+            artigoHTML += '</article>';
+            return artigoHTML;
+    }
+
+    document.getElementById('submitModal').addEventListener('click', function () {
+        // Substituir o conteúdo do card pelo conteúdo do modal
+        document.getElementById('meuCard').innerHTML = construirArtigoCoach(Coachs[0]);
+    });
+    document.getElementById('submitModal2').addEventListener('click', function () {
+        // Substituir o conteúdo do card pelo conteúdo do modal
+        document.getElementById('meuCard').innerHTML = construirArtigoCoach(Coachs[1]);
+    });
+
+
 })

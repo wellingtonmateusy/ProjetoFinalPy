@@ -56,6 +56,31 @@ section #buttonsheader .cadastro{
     margin-top: 5px;
 }
 
+#ar_jogadores{
+    margin-left: 15%;
+    margin-top: 50px;
+}
+
+#imgJogador{
+    border-radius: 100%;
+}
+
+#espaco{
+    margin-left: 5px;
+}
+
+#icones, h3, h5, h6, p{
+    color: #fff;
+}
+
+.bi-plus-lg{
+    color: #198754;
+}
+
+.bi-dash-lg{
+    color: #dc3545;
+}
+
 .card-body{
     justify-content: center;
 }
@@ -63,6 +88,10 @@ section #buttonsheader .cadastro{
 .card-body h6{
     margin-left: 5px;
     text-align: center;
+}
+
+.card-body .Fnome{
+    margin-top: 20%;
 }
 
 .card-footer .card{
@@ -87,33 +116,26 @@ section #buttonsheader .cadastro{
 
 .card-footer .btn-danger{
     margin-left: 30%;
+    text-transform: uppercase;
 }
+
+.card-footer .btn-success{
+    background-color: #D3AD6C;
+    color: #212529;
+    border: none;
+    text-transform: uppercase;
+}
+
+.card-footer .btn-success:active{
+    background-color: #D3AD6C;
+    color: #212529;
+}
+
 
 .card-footer button{
     width: 20%;
     height: 10%;
     margin-top: 5px;
-}
-
-#ar_jogadores{
-    margin-left: 15%;
-    margin-top: 50px;
-}
-
-#imgJogador{
-    border-radius: 100%;
-}
-
-#espaco{
-    margin-left: 5px;
-}
-
-#icones, h3, h5, h6, p{
-    color: #fff;
-}
-
-.bi-plus-lg{
-    color: green;
 }
 
 .modal-header{
@@ -164,8 +186,7 @@ div #campeonatos:hover .card{
 #tabelaTop, #tabelaJg,
 #tabelaMid, #tabelaAdc,
 #tabelaSup, #tabelaCoach{
-    padding: 2px;
-    max-height: 350px;
+    max-height: 450px;
     overflow-y: scroll;
     border-collapse: collapse;
     width: 100%;
@@ -255,7 +276,12 @@ form h6{
 }
 
 @media screen and (min-width: 1024px){
+    section #buttonsheader .login{
+        margin-left: 100px;
+    }
+}
 
+@media screen and (min-width: 761px) and (max-width: 1023px){
     .navbar-brand img{
         width: 205px;
     }
@@ -272,10 +298,6 @@ form h6{
     .nav-item:hover{
         width: 195px;
     }
-}
-
-@media screen and (min-width: 761px) and (max-width: 1023px){
-    
 }
 
 
