@@ -12,10 +12,6 @@ html{
     display: flex;
 }
 
-.bi-wallet{
-    font-size: larger;
-}
-
 section #buttonsheader .login{
     background-color: #D3AD6C;
     color: #212529; 
@@ -38,14 +34,12 @@ section #buttonsheader .cadastro{
 
 .nav-item .nav-link{
     width: 280px;
+    margin: 3px 0 0 3px;
 }
 
-.navbar-nav .nav-item .active{
-    background-color: #161616;
-}
-
-.nav-item:hover{
+.nav-item:hover, .card-footer .card:hover{
     background-color: #2c2c2c;
+    cursor: pointer;
     border-radius: 6px;
 }
 
@@ -69,6 +63,36 @@ section #buttonsheader .cadastro{
 .card-body h6{
     margin-left: 5px;
     text-align: center;
+}
+
+.card-footer .card{
+    background-color: #212529;
+}
+
+.card-footer div{
+    display: -moz-grid-line;
+    grid-column-gap: 8px;
+}
+
+.card-footer .card{
+    width: 8%;
+    height: 50px;
+}
+
+.card-footer #icones{
+    font-size: 30px;
+    text-align: center;
+    color: rgb(252, 53, 53);
+}
+
+.card-footer .btn-danger{
+    margin-left: 30%;
+}
+
+.card-footer button{
+    width: 20%;
+    height: 10%;
+    margin-top: 5px;
 }
 
 #ar_jogadores{
@@ -110,6 +134,27 @@ div #campeonatos .card{
 
 div #campeonatos:hover .card{
     background-color: #2c2c2c;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-text{
+    display: none;
+}
+
+#imgMT article:hover .image-text{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 #imgMT article:hover img{
@@ -203,6 +248,34 @@ form #email, #senha, #nome{
 
 form h6{
     text-align: center;
+}
+
+@media screen and (max-width: 760px){
+    
+}
+
+@media screen and (min-width: 1024px){
+
+    .navbar-brand img{
+        width: 205px;
+    }
+
+    .nav-item .espacoNav{
+        margin-left: 15%;
+    }
+
+    .nav-item .nav-link{
+        width: 195px;
+        margin-right: 14px;
+    }
+
+    .nav-item:hover{
+        width: 195px;
+    }
+}
+
+@media screen and (min-width: 761px) and (max-width: 1023px){
+    
 }
 
 

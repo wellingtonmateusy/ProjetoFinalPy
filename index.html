@@ -15,8 +15,8 @@
             <section>
                 <div class="container">
                     <div class="d-flex">
-                        <div class="text-center col-12">
-                            <img src="./lib/midias/Logos/League-of-Legends-Logo.png" alt="Logo Golden Hour" style="width: 120px;">
+                        <div class="text-center col-11">
+                            <img src="./lib/midias/Logos/League-of-Legends-Logo.png" alt="Logo League of Legends" style="width: 120px;">
                         </div>
                         <div class="col-2 mt-3" id="buttonsheader">
                             <a href="./login.html">
@@ -36,52 +36,67 @@
                     <div class="navbar-brand">
                         <img src="./lib/midias/Logos/Dream Sketch.png" alt="">
                     </div>
-                    <div>
-                        <ul class="navbar-nav d-block">
-                            <li class="nav-item mt-3">
-                                <a class="nav-link active" href="">
-                                    <div class="ico_nome d-flex" id="icones">
-                                        <span  class="espacoNav"></span>
-                                        <i class="bi bi-house"></i> 
-                                        <h6>Home</h6>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./montarTime.html" class="text-center">
-                                    <div class="ico_nome d-flex" id="icones">
-                                        <span  class="espacoNav"></span>
-                                        <i class="bi bi-dpad"></i>
-                                        <h6>Monte seu Time</h6>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <div class="ico_nome d-flex" id="icones">
-                                        <span  class="espacoNav"></span>
-                                        <i class="bi bi-trophy"></i>
-                                        <h6>Campeonato</h6>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <div class="ico_nome d-flex" id="icones">
-                                        <span class="espacoNav"></span>
-                                        <i class="bi bi-calendar-week"></i>
-                                        <h6>Partidas</h6>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    <ul class="nav navbar-nav d-block">
+                        <li class="nav-item mt-3">
+                            <a href="#" class="nav-link">
+                                <div class="ico_nome d-flex" id="icones">
+                                    <span  class="espacoNav"></span>
+                                    <i class="bi bi-house"></i> 
+                                    <h6>Home</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./montarTime.html" class="nav-link">
+                                <div class="ico_nome d-flex" id="icones">
+                                    <span  class="espacoNav"></span>
+                                    <i class="bi bi-dpad"></i>
+                                    <h6>Monte seu Time</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <div class="ico_nome d-flex" id="icones">
+                                    <span  class="espacoNav"></span>
+                                    <i class="bi bi-trophy"></i>
+                                    <h6>Campeonato</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <div class="ico_nome d-flex" id="icones">
+                                    <span class="espacoNav"></span>
+                                    <i class="bi bi-calendar-week"></i>
+                                    <h6>Partidas</h6>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </nav>
             </div>
             <div class="col-10">
                 <div class="row">
                     <div class="col-8">
-                        <img src="https://via.placeholder.com/900x450" alt="" class="mt-5 mb-5 w-100 rounded">
+                        <div class="carousel slide" id="carousel-ex" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div data-bs-interval="3000" class="carousel-item active">
+                                    <img src="./lib/midias/Banners/2024.png" alt="" class="mt-5 mb-5 w-100 rounded">
+                                </div>
+                                <div data-bs-interval="3000" class="carousel-item">
+                                    <img src="./lib/midias/Banners/Exodia.png" alt="" class="mt-5 mb-5 w-100 rounded">
+                                </div>
+                                <div data-bs-interval="2000" class="carousel-item">
+                                    <img src="./lib/midias/Banners/HB20.png" alt="" class="mt-5 mb-5 w-100 rounded">
+                                </div>
+                            </div>
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carousel-ex" class="active" data-bs-slide-to="0"></button>
+                                <button type="button" data-bs-target="#carousel-ex" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#carousel-ex" data-bs-slide-to="2"></button>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-4 mt-5">
                         <p>Campeonatos</p>
@@ -103,7 +118,7 @@
                                 <article class="card">
                                     <div class="card-body">
                                         <div class="d-flex">
-                                            <img src="./lib/midias/Campeonatos/LPL.jpg" alt="" class="w-25 rounded">
+                                            <img src="./lib/midias/Campeonatos/LPL.png" alt="" class="w-25 rounded">
                                             <p class="text-center m-2">LPL 2024 Split 1</p>
                                         </div>
                                     </div>
@@ -156,7 +171,10 @@
                             <a href="#">
                                 <article class="card bg-dark">
                                     <div class="card-body">
-                                        <img src="./lib/midias/Campeonatos/LPL.jpg" alt="" class="w-100 rounded">
+                                        <div class="image-container">
+                                            <img src="./lib/midias/Campeonatos/LPL.png" alt="" class="w-100 rounded">
+                                            <div class="image-text">Em Breve</div>
+                                        </div>
                                         <h5 class="text-center mt-2">LPL 2024 Split 1</h5>
                                         <p class="card-text text-center">Monte seu time dos Sonhos com Jogadores da LPL</p>
                                     </div>
@@ -167,7 +185,10 @@
                             <a href="#">
                                 <article class="card bg-dark">
                                     <div class="card-body">
-                                        <img src="./lib/midias/Campeonatos/LCK.webp" alt="" class="w-100 rounded">
+                                        <div class="image-container">
+                                            <img src="./lib/midias/Campeonatos/LCK.webp" alt="" class="w-100 rounded">
+                                            <div class="image-text">Em Breve</div>
+                                        </div>
                                         <h5 class="text-center mt-2">LCK 2024 1° Split</h5>
                                         <p class="card-text text-center">Monte seu time dos Sonhos com Jogadores da LCK</p>
                                     </div>
