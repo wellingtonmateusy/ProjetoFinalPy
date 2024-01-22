@@ -83,10 +83,6 @@ $(document).ready(function(){
         // Coachs
     ];
 
-    var jogadores = [
-        {"foto": "./lib/midias/Jogadores/images.png", "nome": "Coach", "posicao": "./lib/midias/Funções/Coach.png"}
-    ];
-
     var pos = {jogadoresTop, jogadoresJg, jogadoresMid, jogadoresAdc, jogadoresSup, Coachs};
 
     function construirTabela(elementos = pos) {
@@ -173,9 +169,9 @@ $(document).ready(function(){
     function construirArtigo(elementos = pos) {
         return `
             <article class="card-body" id="article">
-                <img src="${elementos.pais || ''}" alt="" class="col-3 rounded pais">
-                <img src="${elementos.time || ''}" alt="" class="col-3 time">
-                <img src="${elementos.foto || ''}" alt="${elementos.nome || ''}" class="col-12 mt-2" id="imgJogador">
+                <img src="${elementos.pais || ''}" alt="" class="col-3 mb-2 rounded pais">
+                <img src="${elementos.time || ''}" alt="" class="col-3 mb-2 time">
+                <img src="${elementos.foto || ''}" alt="${elementos.nome || ''}" class="col-12" id="imgJogador">
                 <div class="d-flex justify-content-center mb-2">
                     <img src="${elementos.posicao || ''}" alt="" class="col-5 mt-2" id="funcao">
                     <h6 class="Fnome">${elementos.nome || ''}</h6>
@@ -191,14 +187,28 @@ $(document).ready(function(){
     //     document.getElementById("modalContent").appendChild(document.createElement('DIV')).setAttribute('id','article');
     // });
 
-    document.querySelector("#resetTop").addEventListener('click', function () {
+    document.querySelector("#limpar").addEventListener('click', function () {
+        const funcoes = ['Top','Jungler','Mid', 'BotADC', 'BotSuporte']
         // Get the article element
-        const article = document.getElementById("modalTop");
-
+        const article = document.getElementById("article");
         // Replace the image source and content
+        article.querySelector(".pais").remove();
+        article.querySelector(".time").remove();
         article.querySelector("#imgJogador").src = "./lib/midias/Jogadores/images.png";
-        article.querySelector("#funcao").src = "./lib/midias/Funções/Jungler.png"
-        article.querySelector("h6").textContent = "Jungler";
+        article.querySelector("#funcao").src = "./lib/midias/Funções/Top.png"
+        article.querySelector("h6").textContent = "Top";
+        var btnDanger = article.querySelector(".btn-danger");
+        if (btnDanger) {
+            // Cria um novo botão
+            var novoBotao = document.createElement("button");
+            novoBotao.type = "submit"; // Defina o tipo de botão conforme necessário
+            novoBotao.classList.add("btn", "btn-success", "col-12", "bg-dark");
+            novoBotao.dataset.toggle = "modal";
+            novoBotao.dataset.target = "#comprarTop";
+            novoBotao.innerHTML = '<i class="bi bi-plus-lg"></i></button>'; // Adicione o conteúdo do botão conforme necessário
+
+            // Substitui o botão antigo pelo novo botão
+            btnDanger.parentNode.replaceChild(novoBotao, btnDanger);
+        }
     });
-    
 })

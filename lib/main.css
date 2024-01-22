@@ -29,7 +29,7 @@ section #buttonsheader .cadastro{
 }
 
 .navbar-nav{
-    height: 1080px;
+    height: 1200px;
 }
 
 .nav-item .nav-link{
@@ -282,6 +282,10 @@ form h6{
 @media screen and (max-width: 1450px){
     .navbar-brand img{
         width: 205px;
+    }
+
+    .navbar-nav{
+        height: 1080px;
     }
 
     .nav-item .espacoNav{
