@@ -94,6 +94,10 @@ section #buttonsheader .cadastro{
     margin-top: 20%;
 }
 
+.pais{
+    margin-right: 5px;
+}
+
 .card-footer .card{
     background-color: #212529;
 }
@@ -275,13 +279,7 @@ form h6{
     
 }
 
-@media screen and (min-width: 1024px){
-    section #buttonsheader .login{
-        margin-left: 100px;
-    }
-}
-
-@media screen and (min-width: 761px) and (max-width: 1023px){
+@media screen and (max-width: 1450px){
     .navbar-brand img{
         width: 205px;
     }
@@ -298,6 +296,16 @@ form h6{
     .nav-item:hover{
         width: 195px;
     }
+}
+
+@media screen and (min-width: 1460px) {
+    section #buttonsheader .login{
+        margin-left: 100px;
+    }
+}
+
+@media screen and (min-width: 761px) and (max-width: 1023px){
+    
 }
 
 
