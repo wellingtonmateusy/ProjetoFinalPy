@@ -165,7 +165,8 @@ $(document).ready(function(){
         adicionarEventoSubmit(i);
     }
 
-//Criador do article com imgem do jogador quando é apertado o button sumit da tabela do modal
+
+    //Criador do article com imgem do jogador quando é apertado o button sumit da tabela do modal
     function construirArtigo(elementos = pos) {
         return `
             <article class="card-body" id="article">
@@ -176,15 +177,16 @@ $(document).ready(function(){
                     <img src="${elementos.posicao || ''}" alt="" class="col-5 mt-2" id="funcao">
                     <h6 class="Fnome">${elementos.nome || ''}</h6>
                 </div>
-                <button type="reset" class="btn btn-danger col-12 bg-dark" id="resetTop"><i class="bi bi-dash-lg"></i></button>
+                <button type="reset" class="btn btn-danger col-12 bg-dark" id="resetTop0"><i class="bi bi-dash-lg"></i></button>
             </article>
         `;
     }
+    // Cria o artigo e adiciona ao modalContent
 
-    document.getElementById("resetTop").addEventListener('click', function () {
-        // Substituir o conteúdo do modal pelo conteúdo da posição
-        document.querySelector("#modalTop").remove();
-        document.getElementById("modalContent").appendChild(document.createElement('DIV')).setAttribute('id','article');
+    // Adiciona o evento de clique após a inserção do HTML no DOM
+    document.getElementById("resetTop0").addEventListener('click', function () {
+        // Lógica de reset aqui
+        document.getElementById("imgJogador").remove();
     });
 
     document.querySelector("#limpar").addEventListener('click', function () {
