@@ -176,39 +176,19 @@ $(document).ready(function(){
                     <img src="${elementos.posicao || ''}" alt="" class="col-5 mt-2" id="funcao">
                     <h6 class="Fnome">${elementos.nome || ''}</h6>
                 </div>
-                <button type="reset" class="btn btn-danger col-12 bg-dark" id="${elementos.idreset || ''}"><i class="bi bi-dash-lg"></i></button>
+                <button type="reset" class="btn btn-danger col-12 bg-dark" id="resetTop"><i class="bi bi-dash-lg"></i></button>
             </article>
         `;
     }
 
-    // document.getElementById("resetTop").addEventListener('click', function () {
-    //     // Substituir o conteúdo do modal pelo conteúdo da posição
-    //     document.querySelector("#article").remove();
-    //     document.getElementById("modalContent").appendChild(document.createElement('DIV')).setAttribute('id','article');
-    // });
+    document.getElementById("resetTop").addEventListener('click', function () {
+        // Substituir o conteúdo do modal pelo conteúdo da posição
+        document.querySelector("#modalTop").remove();
+        document.getElementById("modalContent").appendChild(document.createElement('DIV')).setAttribute('id','article');
+    });
 
     document.querySelector("#limpar").addEventListener('click', function () {
-        const funcoes = ['Top','Jungler','Mid', 'BotADC', 'BotSuporte']
-        // Get the article element
-        const article = document.getElementById("article");
-        // Replace the image source and content
-        article.querySelector(".pais").remove();
-        article.querySelector(".time").remove();
-        article.querySelector("#imgJogador").src = "./lib/midias/Jogadores/images.png";
-        article.querySelector("#funcao").src = "./lib/midias/Funções/Top.png"
-        article.querySelector("h6").textContent = "Top";
-        var btnDanger = article.querySelector(".btn-danger");
-        if (btnDanger) {
-            // Cria um novo botão
-            var novoBotao = document.createElement("button");
-            novoBotao.type = "submit"; // Defina o tipo de botão conforme necessário
-            novoBotao.classList.add("btn", "btn-success", "col-12", "bg-dark");
-            novoBotao.dataset.toggle = "modal";
-            novoBotao.dataset.target = "#comprarTop";
-            novoBotao.innerHTML = '<i class="bi bi-plus-lg"></i></button>'; // Adicione o conteúdo do botão conforme necessário
-
-            // Substitui o botão antigo pelo novo botão
-            btnDanger.parentNode.replaceChild(novoBotao, btnDanger);
-        }
+        location.reload();
     });
+
 })
