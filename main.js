@@ -147,15 +147,21 @@ $(document).ready(function(){
     }
 
 //Função do button sumit do modal
-    function adicionarEventoSubmit(i) {
+    function adicionarEventoSubmit(elementos = pos,i) {
         for (const posicao of posicoes) {
-            const submitId = `submit${posicao}${i}`;
+            const submitId = `#submit${posicao}${i}`;
             const modalId = `modal${posicao}`;
-            const jogadoresDaPosicao = jogadoresPorPosicao[posicao];
     
-            document.getElementById(submitId).addEventListener('click', function () {
-                // Substituir o conteúdo do modal pelo conteúdo da posição
-                document.getElementById(modalId).innerHTML = construirArtigo(jogadoresDaPosicao[i]);
+            document.querySelector("#submitTop0").addEventListener('click', function () {
+                // Get the article element
+                const modal = document.getElementById("modalTop");
+                // Replace the image source and content
+                modal.querySelector(".pais").src = `${jogadoresTop[0].pais}`;
+                modal.querySelector(".time").src = `${jogadoresTop[0].time}`;
+                modal.querySelector("#imgJogador").src = `${jogadoresTop[0].foto}`;
+                modal.querySelector("#funcao").src = `${jogadoresTop[0].posicao}`;
+                modal.querySelector("h6").textContent = `${jogadoresTop[0].nome}`;
+                modal.querySelector(".btn-success").remove(); // Alterado para .btn-success
             });
         }
     }
@@ -167,27 +173,22 @@ $(document).ready(function(){
 
 
     //Criador do article com imgem do jogador quando é apertado o button sumit da tabela do modal
-    function construirArtigo(elementos = pos) {
-        return `
-            <article class="card-body" id="article">
-                <img src="${elementos.pais || ''}" alt="" class="col-3 mb-2 rounded pais">
-                <img src="${elementos.time || ''}" alt="" class="col-3 mb-2 time">
-                <img src="${elementos.foto || ''}" alt="${elementos.nome || ''}" class="col-12" id="imgJogador">
-                <div class="d-flex justify-content-center mb-2">
-                    <img src="${elementos.posicao || ''}" alt="" class="col-5 mt-2" id="funcao">
-                    <h6 class="Fnome">${elementos.nome || ''}</h6>
-                </div>
-                <button type="reset" class="btn btn-danger col-12 bg-dark" id="resetTop0"><i class="bi bi-dash-lg"></i></button>
-            </article>
-        `;
-    }
-    // Cria o artigo e adiciona ao modalContent
+    // function construirArtigo(elementos = pos) {
+    //     return `
+    //         <article class="card-body" id="article">
+    //             <img src="${elementos.pais || ''}" alt="" class="col-3 mb-2 rounded pais">
+    //             <img src="${elementos.time || ''}" alt="" class="col-3 mb-2 time">
+    //             <img src="${elementos.foto || ''}" alt="${elementos.nome || ''}" class="col-12" id="imgJogador">
+    //             <div class="d-flex justify-content-center mb-2">
+    //                 <img src="${elementos.posicao || ''}" alt="" class="col-5 mt-2" id="funcao">
+    //                 <h6 class="Fnome">${elementos.nome || ''}</h6>
+    //             </div>
+    //             <button type="reset" class="btn btn-danger col-12 bg-dark" id="resetTop0"><i class="bi bi-dash-lg"></i></button>
+    //         </article>
+    //     `;
+    // }
 
-    // Adiciona o evento de clique após a inserção do HTML no DOM
-    document.getElementById("resetTop0").addEventListener('click', function () {
-        // Lógica de reset aqui
-        document.getElementById("imgJogador").remove();
-    });
+    
 
     document.querySelector("#limpar").addEventListener('click', function () {
         location.reload();
