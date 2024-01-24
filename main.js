@@ -147,28 +147,24 @@ $(document).ready(function(){
     }
 
 //Função do button sumit do modal
-    function adicionarEventoSubmit(elementos = pos,i) {
-        for (const posicao of posicoes) {
-            const submitId = `#submit${posicao}${i}`;
-            const modalId = `modal${posicao}`;
-    
-            document.querySelector("#submitTop0").addEventListener('click', function () {
-                // Get the article element
-                const modal = document.getElementById("modalTop");
-                // Replace the image source and content
-                modal.querySelector(".pais").src = `${jogadoresTop[0].pais}`;
-                modal.querySelector(".time").src = `${jogadoresTop[0].time}`;
-                modal.querySelector("#imgJogador").src = `${jogadoresTop[0].foto}`;
-                modal.querySelector("#funcao").src = `${jogadoresTop[0].posicao}`;
-                modal.querySelector("h6").textContent = `${jogadoresTop[0].nome}`;
-                modal.querySelector(".btn-success").remove(); // Alterado para .btn-success
+    function adicionarEventoSubmit() {
+        for (let i = 0; i < posicoes.length; i++) {
+            const submitId = `#submitTop${i}`;
+            const modalId = `#modal${posicoes[i]}`;
+            const jogador = jogadoresTop[i];
+
+            $(submitId).on('click', function () {
+                const modal = $(modalId);
+
+                modal.find(".pais").attr("src", jogador.pais);
+                modal.find(".time").attr("src", jogador.time);
+                modal.find("#imgJogador").attr("src", jogador.foto);
+                modal.find("#funcao").attr("src", jogador.posicao);
+                modal.find("h6").text(jogador.nome);
+                modal.find(".btn-success").remove();
+                modal.find(".btn-danger").css("display", "block");
             });
         }
-    }
-    
-    // Adicionar eventos de clique para índices de 0 a 9
-    for (let i = 0; i < 10; i++) {
-        adicionarEventoSubmit(i);
     }
 
 

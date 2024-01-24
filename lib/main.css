@@ -150,6 +150,10 @@ a{
     text-decoration: none;
 }
 
+#modalTop .btn-danger{
+    display: none;
+}
+
 #jogador{
     width: 50%;
 }
