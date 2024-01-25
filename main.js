@@ -14,7 +14,7 @@ $(document).ready(function(){
     ];
 
     var jogadoresJg = [
-        {"foto": "./lib/midias/Jogadores/Fluxo/2JG.png", "nome": "Sting", "pais": "./lib/midias/Bandeiras/Brasil.webp", "time": "./lib/midias/LogosOrgs/Fluxo.webp", "id": "submitJungler0", "preco": 100},
+        {"foto": "./lib/midias/Jogadores/Fluxo/2JG.webp", "nome": "Sting", "pais": "./lib/midias/Bandeiras/Brasil.webp", "time": "./lib/midias/LogosOrgs/Fluxo.webp", "id": "submitJungler0", "preco": 100},
         {"foto": "./lib/midias/Jogadores/Furia/2JG.webp", "nome": "Mir", "pais": "./lib/midias/Bandeiras/Coreia.svg", "time": "./lib/midias/LogosOrgs/FURIA.png", "id": "submitJungler1", "preco": 100},
         {"foto": "./lib/midias/Jogadores/Intz/2JG.webp", "nome": "Yampi", "pais": "./lib/midias/Bandeiras/Brasil.webp", "time": "./lib/midias/LogosOrgs/INTZ.webp", "id": "submitJungler2", "preco": 100},
         {"foto": "./lib/midias/Jogadores/Kabum/2JG.webp", "nome": "Malrang", "pais": "./lib/midias/Bandeiras/Coreia.svg", "time": "./lib/midias/LogosOrgs/KaBum.png", "id": "submitJungler3", "preco": 150},
@@ -111,7 +111,7 @@ $(document).ready(function(){
                     <td><img src="${elementos[i].pais}" alt="" class="rounded w-100"></td>
                     <td class="text-center"><img src="${elementos[i].time}" alt="" class="w-75"></td>
                     <td class="text-center">${elementos[i].preco}</td>
-                    <td><button type="submit" class="btn btn-success col-12 bg-dark" id="${elementos[i].id}"><i class="bi bi-plus-lg"></i></button></td>
+                    <td><button data-dismiss="modal" type="submit" class="btn btn-success col-12 bg-dark" id="${elementos[i].id}"><i class="bi bi-plus-lg"></i></button></td>
                 </tr>
             `;
         }
@@ -184,7 +184,7 @@ $(document).ready(function(){
                 modal.find(".pais").attr("src", jogador.pais);
                 modal.find(".time").attr("src", jogador.time);
                 modal.find("#imgJogador").attr("src", jogador.foto);
-                modal.find("#imgJogador").attr("alt", jogador.nome)
+                modal.find("#imgJogador").attr("alt", jogador.nome);
                 modal.find("#funcao").attr("src", jogador.posicao);
                 modal.find("h6").text(jogador.nome);
                 modal.find(".btn-success")

@@ -63,6 +63,7 @@ section #buttonsheader .cadastro{
 
 #imgJogador{
     border-radius: 100%;
+    max-height: 135px;
 }
 
 #espaco{
