@@ -14,7 +14,7 @@ $(document).ready(function(){
     ];
 
     var jogadoresJg = [
-        {"foto": "./lib/midias/Jogadores/Fluxo/2JG.webp", "nome": "Sting", "pais": "./lib/midias/Bandeiras/Brasil.webp", "time": "./lib/midias/LogosOrgs/Fluxo.webp", "id": "submitJungler0", "preco": 100},
+        {"foto": "./lib/midias/Jogadores/Fluxo/2JG.png", "nome": "Sting", "pais": "./lib/midias/Bandeiras/Brasil.webp", "time": "./lib/midias/LogosOrgs/Fluxo.webp", "id": "submitJungler0", "preco": 100},
         {"foto": "./lib/midias/Jogadores/Furia/2JG.webp", "nome": "Mir", "pais": "./lib/midias/Bandeiras/Coreia.svg", "time": "./lib/midias/LogosOrgs/FURIA.png", "id": "submitJungler1", "preco": 100},
         {"foto": "./lib/midias/Jogadores/Intz/2JG.webp", "nome": "Yampi", "pais": "./lib/midias/Bandeiras/Brasil.webp", "time": "./lib/midias/LogosOrgs/INTZ.webp", "id": "submitJungler2", "preco": 100},
         {"foto": "./lib/midias/Jogadores/Kabum/2JG.webp", "nome": "Malrang", "pais": "./lib/midias/Bandeiras/Coreia.svg", "time": "./lib/midias/LogosOrgs/KaBum.png", "id": "submitJungler3", "preco": 150},
@@ -146,15 +146,10 @@ $(document).ready(function(){
         }
     }
 
-    $("#limpar").on('click', function () {
-        resetarModal("modalTOP");
-    });
-
     function resetarModal() {
         for (const posicao of posicoes){
             const resetId = `#reset${posicao}`;
             const modalId = `#modal${posicao}`;
-            // Obtém o texto atual do elemento h6
             $(document).on('click', resetId, function () {
                 const modal = $(modalId);
                 modal.find(".pais").attr("src", "./lib/midias/Logos/League-of-Legends-Logo.png");
@@ -189,6 +184,7 @@ $(document).ready(function(){
                 modal.find(".pais").attr("src", jogador.pais);
                 modal.find(".time").attr("src", jogador.time);
                 modal.find("#imgJogador").attr("src", jogador.foto);
+                modal.find("#imgJogador").attr("alt", jogador.nome)
                 modal.find("#funcao").attr("src", jogador.posicao);
                 modal.find("h6").text(jogador.nome);
                 modal.find(".btn-success")
@@ -198,7 +194,6 @@ $(document).ready(function(){
                     .html('<i class="bi bi-dash-lg"></i>')
                     .removeAttr("data-toggle")
                     .removeAttr("data-target");
-                console.log(`Clicado submit para ${posicao} ${indice}`);
             });
         }
     }

@@ -187,34 +187,34 @@ div #campeonatos:hover .card{
     opacity: 0.5;
 }
 
-#tabelaTop, #tabelaJg,
-#tabelaMid, #tabelaAdc,
-#tabelaSup, #tabelaCoach{
+#tabelaTOP, #tabelaJungler,
+#tabelaMID, #tabelaADC,
+#tabelaSUP, #tabelaCoach{
     max-height: 450px;
     overflow-y: scroll;
     border-collapse: collapse;
     width: 100%;
 }
 
-#tabelaTop::-webkit-scrollbar-track, #tabelaJg::-webkit-scrollbar-track,
-#tabelaMid::-webkit-scrollbar-track, #tabelaAdc::-webkit-scrollbar-track,
-#tabelaSup::-webkit-scrollbar-track, #tabelaCoach::-webkit-scrollbar-track,
+#tabelaTOP::-webkit-scrollbar-track, #tabelaJungler::-webkit-scrollbar-track,
+#tabelaMID::-webkit-scrollbar-track, #tabelaADC::-webkit-scrollbar-track,
+#tabelaSUP::-webkit-scrollbar-track, #tabelaCoach::-webkit-scrollbar-track,
 html::-webkit-scrollbar-track{
     padding: 2px 0;
     background-color: #404040;
     border-radius: 10px;
 }
 
-#tabelaTop::-webkit-scrollbar, #tabelaJg::-webkit-scrollbar,
-#tabelaMid::-webkit-scrollbar, #tabelaAdc::-webkit-scrollbar,
-#tabelaSup::-webkit-scrollbar, #tabelaCoach::-webkit-scrollbar,
+#tabelaTOP::-webkit-scrollbar, #tabelaJungler::-webkit-scrollbar,
+#tabelaMID::-webkit-scrollbar, #tabelaADC::-webkit-scrollbar,
+#tabelaSUP::-webkit-scrollbar, #tabelaCoach::-webkit-scrollbar,
 html::-webkit-scrollbar{
     width: 10px;
 }
 
-#tabelaTop::-webkit-scrollbar-thumb, #tabelaJg::-webkit-scrollbar-thumb,
-#tabelaMid::-webkit-scrollbar-thumb, #tabelaAdc::-webkit-scrollbar-thumb,
-#tabelaSup::-webkit-scrollbar-thumb, #tabelaCoach::-webkit-scrollbar-thumb,
+#tabelaTOP::-webkit-scrollbar-thumb, #tabelaJungler::-webkit-scrollbar-thumb,
+#tabelaMID::-webkit-scrollbar-thumb, #tabelaADC::-webkit-scrollbar-thumb,
+#tabelaSUP::-webkit-scrollbar-thumb, #tabelaCoach::-webkit-scrollbar-thumb,
 html::-webkit-scrollbar-thumb{
     border-radius: 10px;
     background-color: #D3AD6C;
