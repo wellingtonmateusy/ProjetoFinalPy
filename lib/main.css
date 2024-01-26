@@ -63,7 +63,7 @@ section #buttonsheader .cadastro{
 
 #imgJogador{
     border-radius: 100%;
-    max-height: 135px;
+    height: 145px;
 }
 
 #espaco{
@@ -109,7 +109,7 @@ section #buttonsheader .cadastro{
 }
 
 .card-footer .card{
-    width: 8%;
+    width: 5%;
     height: 50px;
 }
 
@@ -120,7 +120,7 @@ section #buttonsheader .cadastro{
 }
 
 .card-footer .btn-danger{
-    margin-left: 30%;
+    margin-left: 40%;
     text-transform: uppercase;
 }
 

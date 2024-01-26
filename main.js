@@ -158,12 +158,20 @@ $(document).ready(function(){
         });
     });
 
-    function resetarModal() {
-        for (const posicao of posicoes){
+    function resetarModal(jogador) {
+        for (const posicao of posicoes) {
             const resetId = `#reset${posicao}`;
             const modalId = `#modal${posicao}`;
+            $(document).off('click', resetId);
+            $(document).off('click', '.btn-success');
             $(document).on('click', resetId, function () {
                 const modal = $(modalId);
+                // Obter o valor numérico do texto dentro do h6
+                var precoAtual = parseInt($('#precoFinal h6').text());
+                // Somar jogador.preco com tag h6 do label como o novo
+                var novoPreco = precoAtual + parseInt(jogador.preco);
+                // Atualizar o texto da h6 dentro do label com o novo preço
+                $('#precoFinal h6').text(novoPreco);
                 modal.find(".pais").attr("src", "./lib/midias/Logos/League-of-Legends-Logo.png");
                 modal.find(".time").attr("src", "./lib/midias/Logos/Iconpag.png");
                 modal.find("#imgJogador").attr("src", "./lib/midias/Jogadores/images.png");
@@ -174,10 +182,16 @@ $(document).ready(function(){
                     .attr("data-target", `#comprar${posicao}`)
                     .attr("type", "submit")
                     .html('<i class="bi bi-plus-lg"></i>');
+                modal.find('span[data-bs-toggle="popover"]')
+                    .attr("data-bs-content", "")
+                    .popover('dispose')
+                    .popover();
                 adicionarEventoSubmit(posicao);
+                console.log('precoAtual:', precoAtual);
+                console.log('jogador.preco:', jogador.preco);
+                console.log('novoPreco:', novoPreco);
             });
         }
-    
     }
 
     resetarModal("Top");
@@ -191,11 +205,16 @@ $(document).ready(function(){
             const submitId = `#submit${posicao}${j}`;
             const modalId = `#modal${posicao}`;
             const jogador = jogadoresPorPosicao[posicao][j];
+            $(document).off('click', submitId);
+            $(document).off('click', '.btn-danger');
             $(document).on('click', submitId, function () {
                 const modal = $(modalId);
+                // Subtrair jogador.preco da teg h6 da label
+                var novoPreco = parseInt($('#precoFinal h6').text()) - parseInt(jogador.preco);
+                // Atualizar o texto da h6 dentro do label com o novo preço
+                $('#precoFinal h6').text(novoPreco);
                 modal.find(".pais").attr("src", jogador.pais);
                 modal.find(".time").attr("src", jogador.time);
-                modal.find("span").attr("data-bs-content", jogador.preco);
                 modal.find("#imgJogador").attr("src", jogador.foto);
                 modal.find("#imgJogador").attr("alt", jogador.nome);
                 modal.find("#funcao").attr("src", jogador.posicao);
@@ -206,7 +225,13 @@ $(document).ready(function(){
                     .attr("type", "reset")
                     .html('<i class="bi bi-dash-lg"></i>')
                     .removeAttr("data-toggle")
-                    .removeAttr("data-target");
+                    .removeAttr("data-target")
+                // Supondo que você tenha uma referência para o elemento span dentro do modal
+                modal.find('span[data-bs-toggle="popover"]')
+                .attr("data-bs-content", `R$ ${jogador.preco}`)
+                .popover('dispose')
+                .popover() 
+                resetarModal(jogador);
             });
         }
     }
