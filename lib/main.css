@@ -301,6 +301,10 @@ form h6{
     .nav-item:hover{
         width: 195px;
     }
+
+    #imgJogador{
+        height: 100px;
+    }
 }
 
 @media screen and (min-width: 1460px) {

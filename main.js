@@ -146,6 +146,18 @@ $(document).ready(function(){
         }
     }
 
+    $(document).ready(function(){
+        $('[data-bs-content]').popover({
+            trigger: 'manual', // Impede o popover de aparecer automaticamente
+        }).on('mouseenter', function () {
+          // Exibe o popover ao passar o mouse sobre o botão
+        $(this).popover('show');
+        }).on('mouseleave', function () {
+          // Oculta o popover ao retirar o mouse do botão
+        $(this).popover('hide');
+        });
+    });
+
     function resetarModal() {
         for (const posicao of posicoes){
             const resetId = `#reset${posicao}`;
@@ -183,6 +195,7 @@ $(document).ready(function(){
                 const modal = $(modalId);
                 modal.find(".pais").attr("src", jogador.pais);
                 modal.find(".time").attr("src", jogador.time);
+                modal.find("span").attr("data-bs-content", jogador.preco);
                 modal.find("#imgJogador").attr("src", jogador.foto);
                 modal.find("#imgJogador").attr("alt", jogador.nome);
                 modal.find("#funcao").attr("src", jogador.posicao);
