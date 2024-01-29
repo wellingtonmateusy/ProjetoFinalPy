@@ -8,6 +8,10 @@ html{
     overflow-x: hidden;
 }
 
+body{
+    background-color: rgb(27, 24, 24);
+}
+
 #buttonsheader{
     display: flex;
 }
@@ -29,7 +33,7 @@ section #buttonsheader .cadastro{
 }
 
 .navbar-nav{
-    height: 1200px;
+    height: 1300px;
 }
 
 .nav-item .nav-link{
@@ -63,7 +67,7 @@ section #buttonsheader .cadastro{
 
 #imgJogador{
     border-radius: 100%;
-    height: 145px;
+    height: 125px;
 }
 
 #espaco{
@@ -89,7 +93,7 @@ section #buttonsheader .cadastro{
     width:  145px;
     height: 1%;
     padding: 10px;
-    margin-left: 50%;
+    margin-left: 65%;
 }
 
 .bi-plus-lg{
@@ -239,6 +243,15 @@ html::-webkit-scrollbar-thumb{
     background-color: #D3AD6C;
 }
 
+#campeonatos .articleCamp{
+    height: 100px;
+}
+
+#campeonatos .articleCamp img{
+    height: 100%;
+    width: 9%;
+}
+
 .bodyLogin, .bodyCadastro{
     background-image: url(/lib/midias/backgroud.png);
     background-size: cover;
@@ -322,6 +335,10 @@ form h6{
 
     #imgJogador{
         height: 85px;
+    }
+
+    .carteira{
+        margin-left: 50%;
     }
 
     .card-footer .card{

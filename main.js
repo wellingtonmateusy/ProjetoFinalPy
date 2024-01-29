@@ -1,6 +1,6 @@
 $(document).ready(function(){
     var jogadoresTop = [
-        {"foto": "./lib/midias/Jogadores/Fluxo/1TOP.webp", "nome": "Kiari", "pais": "./lib/midias/Bandeiras/Brasil.webp", "time": "./lib/midias/LogosOrgs/Fluxo.webp", "id": "submitTOP0","preco": 100},
+        {"foto": "./lib/midias/Jogadores/Fluxo/1TOP.webp", "nome": "Kiari", "pais": "./lib/midias/Bandeiras/Brasil.webp", "time": "./lib/midias/LogosOrgs/Fluxo.webp", "id": "submitTOP0","preco": 100000},
         {"foto": "./lib/midias/Jogadores/Furia/1TOP.webp", "nome": "Destroy", "pais": "./lib/midias/Bandeiras/Coreia.svg", "time": "./lib/midias/LogosOrgs/FURIA.png", "id": "submitTOP1","preco": 100},
         {"foto": "./lib/midias/Jogadores/Intz/1TOP.webp", "nome": "Tay", "pais": "./lib/midias/Bandeiras/Brasil.webp", "time": "./lib/midias/LogosOrgs/INTZ.webp", "id": "submitTOP2","preco": 100},
         {"foto": "./lib/midias/Jogadores/Kabum/1TOP.webp", "nome": "Lonely", "pais": "./lib/midias/Bandeiras/Coreia.svg", "time": "./lib/midias/LogosOrgs/KaBum.png", "id": "submitTOP3","preco": 150},
