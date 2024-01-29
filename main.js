@@ -69,7 +69,7 @@ $(document).ready(function(){
         // Jogadores Suportes
     ];
 
-    var Coachs = [
+    var coachs = [
         {"foto": "./lib/midias/Jogadores/Fluxo/6COACH.png", "nome": "ONMETA", "pais": "./lib/midias/Bandeiras/Brasil.webp", "time": "./lib/midias/LogosOrgs/Fluxo.webp", "id": "submitCoach0", "preco": 100},
         {"foto": "./lib/midias/Jogadores/Furia/6COACH.png", "nome": "Maestro", "pais": "./lib/midias/Bandeiras/Brasil.webp", "time": "./lib/midias/LogosOrgs/FURIA.png", "id": "submitCoach1", "preco": 100},
         {"foto": "./lib/midias/Jogadores/Intz/6COACH.png", "nome": "Aoshi", "pais": "./lib/midias/Bandeiras/Brasil.webp", "time": "./lib/midias/LogosOrgs/INTZ.webp", "id": "submitCoach2", "preco": 100},
@@ -83,7 +83,7 @@ $(document).ready(function(){
         // Coachs
     ];
 
-    var pos = {jogadoresTop, jogadoresJg, jogadoresMid, jogadoresAdc, jogadoresSup, Coachs};
+    var pos = {jogadoresTop, jogadoresJg, jogadoresMid, jogadoresAdc, jogadoresSup, coachs};
 
     function construirTabela(elementos = pos) {
         let tabelaHTML = '';
@@ -132,7 +132,7 @@ $(document).ready(function(){
         'MID': jogadoresMid,
         'ADC': jogadoresAdc,
         'SUP': jogadoresSup,
-        'Coach': Coachs,
+        'Coach': coachs,
     };
 
     for (const posicao of posicoes) {
@@ -163,21 +163,19 @@ $(document).ready(function(){
             const resetId = `#reset${posicao}`;
             const modalId = `#modal${posicao}`;
             $(document).off('click', resetId);
-            $(document).off('click', '.btn-success');
             $(document).on('click', resetId, function () {
                 const modal = $(modalId);
-                // Obter o valor numérico do texto dentro do h6
-                var precoAtual = parseInt($('#precoFinal h6').text());
-                // Somar jogador.preco com tag h6 do label como o novo
-                var novoPreco = precoAtual + parseInt(jogador.preco);
-                // Atualizar o texto da h6 dentro do label com o novo preço
-                $('#precoFinal h6').text(novoPreco);
+                var novoPreco = 0
+                novoPreco = parseInt($('#precoFinal').text().replace(/\./g, '')) + parseInt(jogador.preco);
+                valorFormatado = parseFloat(novoPreco).toLocaleString('pt-BR', {minimumFractionDigits: 0, maximumFractionDigits: 0});
+                $('#precoFinal').text(valorFormatado);
                 modal.find(".pais").attr("src", "./lib/midias/Logos/League-of-Legends-Logo.png");
                 modal.find(".time").attr("src", "./lib/midias/Logos/Iconpag.png");
                 modal.find("#imgJogador").attr("src", "./lib/midias/Jogadores/images.png");
                 modal.find("h6").text(posicao);
                 modal.find(".btn-danger")
                     .attr("class", "btn btn-success col-12 bg-dark")
+                    .removeAttr("id")
                     .attr("data-toggle", "modal")
                     .attr("data-target", `#comprar${posicao}`)
                     .attr("type", "submit")
@@ -187,32 +185,22 @@ $(document).ready(function(){
                     .popover('dispose')
                     .popover();
                 adicionarEventoSubmit(posicao);
-                console.log('precoAtual:', precoAtual);
-                console.log('jogador.preco:', jogador.preco);
-                console.log('novoPreco:', novoPreco);
             });
         }
     }
-
-    resetarModal("Top");
-    resetarModal("Jg");
-    resetarModal("Mid");
-    resetarModal("Adc");
-    resetarModal("Sup");
 
     function adicionarEventoSubmit(indice, j) {
         for(const posicao of posicoes) {
             const submitId = `#submit${posicao}${j}`;
             const modalId = `#modal${posicao}`;
-            const jogador = jogadoresPorPosicao[posicao][j];
             $(document).off('click', submitId);
-            $(document).off('click', '.btn-danger');
+            const jogador = jogadoresPorPosicao[posicao][j];
             $(document).on('click', submitId, function () {
                 const modal = $(modalId);
-                // Subtrair jogador.preco da teg h6 da label
-                var novoPreco = parseInt($('#precoFinal h6').text()) - parseInt(jogador.preco);
-                // Atualizar o texto da h6 dentro do label com o novo preço
-                $('#precoFinal h6').text(novoPreco);
+                var novoPreco = 0
+                novoPreco = parseInt($('#precoFinal').text().replace(/\./g, '')) - parseInt(jogador.preco);
+                valorFormatado = parseFloat(novoPreco).toLocaleString('pt-BR', {minimumFractionDigits: 0, maximumFractionDigits: 0});
+                $('#precoFinal').text(valorFormatado);
                 modal.find(".pais").attr("src", jogador.pais);
                 modal.find(".time").attr("src", jogador.time);
                 modal.find("#imgJogador").attr("src", jogador.foto);
@@ -231,7 +219,7 @@ $(document).ready(function(){
                 .attr("data-bs-content", `R$ ${jogador.preco}`)
                 .popover('dispose')
                 .popover() 
-                resetarModal(jogador);
+                resetarModal(jogador)
             });
         }
     }

@@ -74,6 +74,24 @@ section #buttonsheader .cadastro{
     color: #fff;
 }
 
+.imgcamp {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.imgcamp img {
+    border-radius: 10%;
+    height: 100%;
+    width: 100%;
+}
+
+.carteira{
+    width:  145px;
+    height: 1%;
+    padding: 10px;
+    margin-left: 50%;
+}
+
 .bi-plus-lg{
     color: #198754;
 }
@@ -303,7 +321,15 @@ form h6{
     }
 
     #imgJogador{
-        height: 100px;
+        height: 85px;
+    }
+
+    .card-footer .card{
+        width: 8%;
+    }
+
+    .card-footer .btn-danger{
+        margin-left: 30%;
     }
 }
 
